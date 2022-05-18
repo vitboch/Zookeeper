@@ -37,7 +37,7 @@ WMMm__,-'.'     /      _.\\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / \`=_}
           /  .'             /  (       .'  /     Ww._     \`.  \`"
          /  Y,              \`,  \`-,=,_{   ;      MMMP\`""-,  \`-._.-,
         (--, )                \`,_ / \`) \\/"")      ^"      \`-, -;"\\:
-The lion is roaring!`;
+The lion is roaring!`
 
 const deer = `
 Switching on the camera in the deer habitat...
@@ -96,7 +96,7 @@ _________________               _________________
            /___      /\\   /\\      ___\\
                 ~-. /  \\_/  \\ .-~
                    V         V
-This bat looks like it’s doing fine.`
+This bat looks like it’s doing fine.`;
 
 const rabbit = `
 Switching on the camera in the rabbit habitat...
@@ -121,10 +121,13 @@ Switching on the camera in the rabbit habitat...
 (" ~----( ~   Y.  )
 It looks like we will soon have more rabbits!`
 
-const answer = input("Which habitat # do you need? > ")
+const habitat = [camel, lion, deer, goose, bat, rabbit ]
 
-const animals = [camel, lion, deer, goose, bat, rabbit]
-
-console.log(animals[answer])
-console.log(`---
-You've reached the end of the program. To check another habitat, please restart the watcher.`)
+while (true) {
+    const question = input("Which habitat # do you need? > ")
+    if (question === 'exit') {
+        console.log('See you later!')
+        break
+    }
+    console.log(habitat[question])
+}
